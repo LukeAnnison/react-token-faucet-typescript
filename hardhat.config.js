@@ -3,7 +3,9 @@ require('dotenv').config()
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
+// eslint-disable-next-line no-undef
 task("accounts", "Prints the list of accounts", async () => {
+  // eslint-disable-next-line no-undef
   const accounts = await ethers.getSigners();
 
   for (const account of accounts) {
