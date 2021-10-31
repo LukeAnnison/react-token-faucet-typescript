@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI= react-scripts build",
+    "build": "wecback --config ",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -45,6 +45,11 @@
     ]
   },
   "devDependencies": {
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@types/styled-components": "^5.1.15",
+    "awesome-typescript-loader": "^5.2.1",
+    "source-map-loader": "^3.0.0",
     "typescript": "^4.4.4"
   }
 }

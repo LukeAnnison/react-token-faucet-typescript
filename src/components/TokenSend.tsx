@@ -6,10 +6,16 @@ import Button from 'react-bootstrap/Button'
 
 const tokenAddress = "0x7c2708B8756509a11A505a0b40544b79d5dcefE3"
 
+declare global {
+  interface Window {
+      ethereum:any;
+  }
+}
+
 const TokenSend = (props) => {
 
-  const [userAccount, setUserAccount] = useState()
-  const [amount, setAmount] = useState()
+  const [userAccount, setUserAccount] = useState<string | null>(null)
+  const [amount, setAmount] = useState<string | null>(null)
 
   // request access to the user's MetaMask account
   async function requestAccount() {

@@ -7,10 +7,16 @@ import Message from './Message'
 
 const tokenAddress = "0x7c2708B8756509a11A505a0b40544b79d5dcefE3"
 
+declare global {
+  interface Window {
+      ethereum:any;
+  }
+}
+
 const Faucet = (props) => {
 
-  const [balance, setBalance] = useState()
-  const [showBalance, setShowBalance] = useState(false)
+  const [balance, setBalance] = useState<string | null>(null);
+  const [showBalance, setShowBalance] = useState<boolean>(false);
 
 
   async function getBalance() {
